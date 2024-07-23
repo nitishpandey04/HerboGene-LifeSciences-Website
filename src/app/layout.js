@@ -16,10 +16,28 @@ export default function RootLayout({ children }) {
       <body className="{inter.className} px-2">
         <NavBar />
         {children}
-        <Footer />
+        <NavBarDropDown />
+        {/* <Footer /> */}
       </body>
     </html>
   );
+}
+
+function NavItem(name, method) {
+  return (
+    <Link href={"/" + method}>
+      <p className="hover:text-gray-500">{name}</p>
+    </Link>
+  );
+}
+
+function NavItems() {
+  return [
+    NavItem("Home", ""),
+    NavItem("About", "about"),
+    NavItem("Products", "products"),
+    NavItem("Contact Us", "contact"),
+  ];
 }
 
 function NavBar() {
@@ -37,21 +55,24 @@ function NavBar() {
           </Link>
         </div>
         <div className="flex gap-x-14 items-center mx-16">
-          <Link href="/">
-            <p className="hover:text-gray-500">Home</p>
-          </Link>
-          <Link href="/about">
-            <p className="hover:text-gray-500">About</p>
-          </Link>
-          <Link href="/products">
-            <p className="hover:text-gray-500">Products</p>
-          </Link>
-          <Link href="/contact_us">
-            <p className="hover:text-gray-500">Contact Us</p>
-          </Link>
+          <NavItems />
         </div>
       </nav>
     </header>
+  );
+}
+
+function NavBarDropDown() {
+  return (
+    <div>
+      <label for="cars"></label>
+      <select name="cars" id="cars">
+        <option value="volvo"></option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </div>
   );
 }
 
