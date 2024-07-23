@@ -13,9 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="{inter.className} px-2">
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
@@ -23,10 +24,17 @@ export default function RootLayout({ children }) {
 
 function NavBar() {
   return (
-    <div className="">
+    <header className="">
       <nav className="flex justify-between shadow-sm shadow-gray-200">
         <div className="w-1/6 my-4 mx-6">
-          <Image src="/herbo logo.jpg" height={1000} width={1000} alt="logo" />
+          <Link href="/">
+            <Image
+              src="/herbo logo.jpg"
+              height={1000}
+              width={1000}
+              alt="logo"
+            />
+          </Link>
         </div>
         <div className="flex gap-x-14 items-center mx-16">
           <Link href="/">
@@ -43,6 +51,34 @@ function NavBar() {
           </Link>
         </div>
       </nav>
-    </div>
+    </header>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="flex-col">
+      <div className="flex">
+        <div>image</div>
+        <div className="flex-col">
+          <div>links</div>
+          <div className="flex">
+            <div className="flex-col">
+              <div>offce address</div>
+              <div>toll free number</div>
+            </div>
+            <div className="flex-col">
+              <div>phone number 1</div>
+              <div>phone number 2</div>
+              <div>email id</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex">
+        <div>copyright</div>
+        <div>social</div>
+      </div>
+    </footer>
   );
 }
