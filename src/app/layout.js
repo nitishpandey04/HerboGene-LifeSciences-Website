@@ -16,8 +16,6 @@ export default function RootLayout({ children }) {
       <body className="{inter.className} px-2">
         <NavBar />
         {children}
-        <NavBarDropDown />
-        {/* <Footer /> */}
       </body>
     </html>
   );
@@ -43,36 +41,21 @@ function NavItems() {
 function NavBar() {
   return (
     <header className="">
-      <nav className="flex justify-between shadow-sm shadow-gray-200">
-        <div className="w-1/6 my-4 mx-6">
-          <Link href="/">
-            <Image
-              src="/herbo logo.jpg"
-              height={1000}
-              width={1000}
-              alt="logo"
-            />
-          </Link>
-        </div>
-        <div className="flex gap-x-14 items-center mx-16">
+      <nav className="flex-col shadow-sm shadow-gray-200">
+        <Link href="/">
+          <Image
+            src="/herbo logo.jpg"
+            height={1000}
+            width={1000}
+            alt="logo"
+            className="w-1/2 mx-auto my-6"
+          />
+        </Link>
+        <div className="flex flex-row justify-around">
           <NavItems />
         </div>
       </nav>
     </header>
-  );
-}
-
-function NavBarDropDown() {
-  return (
-    <div>
-      <label for="cars"></label>
-      <select name="cars" id="cars">
-        <option value="volvo"></option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select>
-    </div>
   );
 }
 
