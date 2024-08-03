@@ -1,9 +1,6 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "HerboGene LifeSciences",
@@ -16,7 +13,7 @@ export default function RootLayout({ children }) {
       <body className="">
         <NavBar />
         <div className="m-8">{children}</div>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
@@ -24,7 +21,7 @@ export default function RootLayout({ children }) {
 
 function NavItem(name, method) {
   return (
-    <Link href={"/" + method}>
+    <Link href={"/" + method} prefetch={true}>
       <p className="hover:text-gray-500">{name}</p>
     </Link>
   );

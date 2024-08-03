@@ -5,10 +5,25 @@ export default function About() {
     <Product productInfo={productInfo} key={productInfo.id} />
   ));
   return (
-    <div>
+    <div className="flex flex-col gap-y-8 items-center md:w-2/3">
       <p className="text-xl text-center">Our Product Range</p>
-      <br />
-      <div className="flex flex-col gap-y-8">{products}</div>
+      <p>
+        At HerboGene LifeSciences Pvt. Ltd., we pride ourselves on offering a
+        diverse range of premium quality herbal and nutraceutical medicines,
+        health supplements, proprietary food products, and healthcare products.
+        Each product is crafted with the utmost care and precision, adhering to
+        the highest standards of quality and safety. Our extensive experience
+        and commitment to excellence ensure that you receive the best products
+        designed to support a healthier mind and body.
+      </p>
+      <p>
+        Explore our wide array of products below, each accompanied by detailed
+        description and image to help you find the perfect fit for your health
+        and wellness needs.
+      </p>
+      <div className="flex flex-col md:grid md:grid-cols-2 items-center">
+        {products}
+      </div>
     </div>
   );
 }
@@ -23,7 +38,7 @@ function Product({ productInfo }) {
         width={1000}
         alt={productInfo.name}
       />
-      <p className="text-2xl">{productInfo.name}</p>
+      <p className="text-xl">{productInfo.name}</p>
       <p className="text-gray-400">{productInfo.description}</p>
     </div>
   );
