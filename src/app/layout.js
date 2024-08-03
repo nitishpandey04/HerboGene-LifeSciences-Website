@@ -13,9 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="{inter.className} px-2">
+      <body className="">
         <NavBar />
-        {children}
+        <div className="m-8">{children}</div>
+        <Footer />
       </body>
     </html>
   );
@@ -61,27 +62,50 @@ function NavBar() {
 
 function Footer() {
   return (
-    <footer className="flex-col">
-      <div className="flex">
-        <div>image</div>
-        <div className="flex-col">
-          <div>links</div>
-          <div className="flex">
-            <div className="flex-col">
-              <div>offce address</div>
-              <div>toll free number</div>
-            </div>
-            <div className="flex-col">
-              <div>phone number 1</div>
-              <div>phone number 2</div>
-              <div>email id</div>
-            </div>
+    <footer className="flex flex-col m-2 gap-y-6 text-gray-500">
+      <div className="flex flex-col items-center gap-y-6">
+        <Image
+          className="w-1/2 my-4"
+          src="/herbo logo.jpg"
+          alt="logo"
+          height={1000}
+          width={1000}
+        />
+        <div className="flex flex-col">
+          <div className="grid"></div>
+          <div className="flex flex-col gap-y-2 items-center">
+            <div>+91 8750-44-33-11</div>
+            <div>+91 8750-44-22-11</div>
+            <div>herbogenelifesciences@gmail.com</div>
           </div>
         </div>
       </div>
-      <div className="flex">
-        <div>copyright</div>
-        <div>social</div>
+      <div className="flex flex-col justify-between items-center gap-y-4">
+        <div>© HerboGene LifeSciences Pvt. Ltd.</div>
+        <div className="flex gap-x-8 mb-16">
+          <Link
+            href="https://in.linkedin.com/in/herbogene-lifesciences"
+            prefetch={true}
+          >
+            <Image
+              src="/social/linkedin.svg"
+              alt="linkedin.com"
+              height={30}
+              width={30}
+            />
+          </Link>
+          <Link href="https://x.com/HerboGene" prefetch={true}>
+            <Image src="/social/x.svg" alt="x.com" height={30} width={30} />
+          </Link>
+          <Link href="https://www.instagram.com/petoooog/" prefetch={true}>
+            <Image
+              src="/social/instagram.svg"
+              alt="instagram.com"
+              height={30}
+              width={30}
+            />
+          </Link>
+        </div>
       </div>
     </footer>
   );
