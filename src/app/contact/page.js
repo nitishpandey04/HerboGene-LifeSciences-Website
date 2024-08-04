@@ -46,10 +46,7 @@ export default function About() {
           Connect with Us: <br />
           <br />
           <div className="flex flex-col gap-y-2 text-blue-600 underline">
-            <Link
-              href="https://in.linkedin.com/in/herbogene-lifesciences"
-              prefetch={true}
-            >
+            <Link href="https://in.linkedin.com/in/herbogene-lifesciences">
               <div className="flex flex-row gap-x-1">
                 <Image
                   src="/social/linkedin.svg"
@@ -61,7 +58,7 @@ export default function About() {
               </div>
             </Link>
             <div className="flex">
-              <Link href="https://x.com/HerboGene" prefetch={true}>
+              <Link href="https://x.com/HerboGene">
                 <div className="flex flex-row gap-x-1">
                   <Image
                     className="flex flex-row"
@@ -75,7 +72,7 @@ export default function About() {
               </Link>
             </div>
             <div className="flex gap-x-1">
-              <Link href="https://www.facebook.com/HerboGene/" prefetch={true}>
+              <Link href="https://www.facebook.com/HerboGene/">
                 <div className="flex flex-row gap-x-1">
                   <Image
                     src="/social/facebook.svg"
@@ -88,7 +85,7 @@ export default function About() {
               </Link>
             </div>
             <div className="flex gap-x-1">
-              <Link href="https://www.instagram.com/petoooog/" prefetch={true}>
+              <Link href="https://www.instagram.com/petoooog/">
                 <div className="flex flex-row gap-x-1">
                   <Image
                     src="/social/instagram.svg"
@@ -109,7 +106,7 @@ export default function About() {
           service and support to our customers.
         </p>
 
-        <div className="text-center">
+        <div className="text-center my-8">
           <b>HerboGene LifeSciences Pvt. Ltd.</b>
           <br />
           <p className="text-gray-500">

@@ -38,22 +38,22 @@ function NavItems() {
 
 function NavBar() {
   return (
-    <header className="">
-      <nav className="flex-col shadow-sm shadow-gray-200">
+    <div className="flex flex-col md:flex-row justify-between items-center shadow-sm shadow-gray-200">
+      <div className="w-1/2 md:w-1/5 my-6 mx-8">
         <Link href="/">
           <Image
             src="/herbo logo.jpg"
             height={1000}
             width={1000}
             alt="logo"
-            className="w-1/2 mx-auto my-6"
+            className=""
           />
         </Link>
-        <div className="flex flex-row justify-around">
-          <NavItems />
-        </div>
-      </nav>
-    </header>
+      </div>
+      <div className="flex flex-row justify-around md:w-1/2 w-full">
+        <NavItems />
+      </div>
+    </div>
   );
 }
 
