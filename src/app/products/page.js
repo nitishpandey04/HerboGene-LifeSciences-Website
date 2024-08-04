@@ -5,24 +5,28 @@ export default function About() {
     <Product productInfo={productInfo} key={productInfo.id} />
   ));
   return (
-    <div className="flex flex-col gap-y-8 items-center md:w-2/3">
-      <p className="text-xl text-center">Our Product Range</p>
-      <p>
-        At HerboGene LifeSciences Pvt. Ltd., we pride ourselves on offering a
-        diverse range of premium quality herbal and nutraceutical medicines,
-        health supplements, proprietary food products, and healthcare products.
-        Each product is crafted with the utmost care and precision, adhering to
-        the highest standards of quality and safety. Our extensive experience
-        and commitment to excellence ensure that you receive the best products
-        designed to support a healthier mind and body.
-      </p>
-      <p>
-        Explore our wide array of products below, each accompanied by detailed
-        description and image to help you find the perfect fit for your health
-        and wellness needs.
-      </p>
-      <div className="flex flex-col md:grid md:grid-cols-2 items-center">
-        {products}
+    <div className="flex flex-col items-center">
+      <div className="flex flex-col md:w-3/4 gap-y-8">
+        <p className="text-xl text-center">Our Product Range</p>
+        <p>
+          At HerboGene LifeSciences Pvt. Ltd., we pride ourselves on offering a
+          diverse range of premium quality herbal and nutraceutical medicines,
+          health supplements, proprietary food products, and healthcare
+          products. Each product is crafted with the utmost care and precision,
+          adhering to the highest standards of quality and safety. Our extensive
+          experience and commitment to excellence ensure that you receive the
+          best products designed to support a healthier mind and body.
+        </p>
+        <p>
+          Explore our wide array of products below, each accompanied by detailed
+          description and image to help you find the perfect fit for your health
+          and wellness needs.
+        </p>
+        <div className="">
+          <div className="flex flex-col md:grid md:grid-cols-2 md:justify-items-center md:gap-y-4">
+            {products}
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -30,7 +34,7 @@ export default function About() {
 
 function Product({ productInfo }) {
   return (
-    <div className="flex flex-col items-center shadow-md rounded-md p-4 gap-y-3">
+    <div className="flex flex-col items-center shadow-md rounded-md p-4 gap-y-3 md:w-1/2">
       <Image
         className="w-2/3"
         src={productInfo.image_path}

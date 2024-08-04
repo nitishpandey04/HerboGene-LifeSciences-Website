@@ -10,7 +10,7 @@ export default function About() {
         width={1000}
         height={1000}
       />
-      <div className="flex flex-col gap-y-8 md:w-2/3">
+      <div className="flex flex-col gap-y-8 md:w-3/4">
         <p>
           HerboGene LifeSciences Pvt. Ltd. is a registered MSME, certified
           manufacturer, and exporter of premium quality herbal and nutraceutical
