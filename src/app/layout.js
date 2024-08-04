@@ -42,7 +42,7 @@ function NavBar() {
       <div className="w-1/2 md:w-1/5 my-6 mx-8">
         <Link href="/">
           <Image
-            src="/herbo logo.jpg"
+            src="/herbogene_logo.png"
             height={1000}
             width={1000}
             alt="logo"
