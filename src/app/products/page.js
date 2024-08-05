@@ -23,7 +23,7 @@ export default function About() {
           and wellness needs.
         </p>
         <div className="">
-          <div className="flex flex-col md:grid md:grid-cols-2 md:justify-items-center md:gap-y-4">
+          <div className="flex flex-col items-center md:grid md:grid-cols-2 md:justify-items-center gap-y-4">
             {products}
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function About() {
 
 function Product({ productInfo }) {
   return (
-    <div className="flex flex-col items-center shadow-md rounded-md p-4 gap-y-3 md:w-1/2">
+    <div className="flex flex-col items-center text-center shadow-md rounded-md p-4 gap-y-3 w-2/3 md:w-1/2">
       <Image
         className="w-2/3"
         src={productInfo.image_path}

@@ -105,15 +105,6 @@ export default function About() {
           opportunities, or feedback. We are committed to providing the best
           service and support to our customers.
         </p>
-
-        <div className="text-center my-8">
-          <b>HerboGene LifeSciences Pvt. Ltd.</b>
-          <br />
-          <p className="text-gray-500">
-            Premium Quality Herbal/Nutraceutical Medicines & Health Supplements
-            Manufacturer & Exporter
-          </p>
-        </div>
       </div>
     </div>
   );
