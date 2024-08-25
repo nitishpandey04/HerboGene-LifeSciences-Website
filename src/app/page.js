@@ -166,7 +166,7 @@ function ContactUs() {
   return (
     <div className="flex justify-center text-center">
       <div className="flex flex-col md:w-1/4">
-        <p className="text-xl">Let's Get in Touch</p>
+        <p className="text-xl">Let Us Get in Touch</p>
         <p>
           We would love to hear from you! Kindly reach out to us by visiting
           our&nbsp;
