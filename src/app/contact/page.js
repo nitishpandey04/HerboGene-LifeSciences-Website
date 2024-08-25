@@ -7,7 +7,14 @@ export default function About() {
       <div className="flex flex-col md:w-2/3 gap-y-8">
         <div className="">
           <p className="font-bold text-xl text-center">Reach out to us</p>
-          <br />
+          <div className="h-60 w-full relative md:h-80 md:my-4">
+            <Image
+              src="/contact_us_3.png"
+              alt="contact us"
+              fill={true}
+              objectFit="contain"
+            />
+          </div>
           We at HerboGene LifeSciences Pvt. Ltd. are here to assist you with any
           inquiries or support you may need. Reach out to us through the
           following contact details:

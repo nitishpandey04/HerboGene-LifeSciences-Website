@@ -4,8 +4,8 @@ export default function About() {
   return (
     <div className="flex flex-col items-center">
       <Image
-        className="my-8 mb-16 md:w-1/3"
-        src="/petoo-g_characters.jpg"
+        className="my-8 mb-16 md:w-2/5"
+        src="/mission_vision.png"
         alt="Petoo-G Characters"
         width={1000}
         height={1000}

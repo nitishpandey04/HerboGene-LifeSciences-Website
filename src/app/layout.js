@@ -10,9 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="">
+      <body>
         <NavBar />
-        <div className="m-8">
+        <div className="m-4">
           {children}
           <Footer />
         </div>
@@ -40,7 +40,7 @@ function NavItems() {
 
 function NavBar() {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center shadow-sm shadow-gray-200">
+    <div className="flex flex-col md:flex-row justify-between items-center shadow-sm shadow-gray-200 pb-2">
       <div className="w-1/2 md:w-1/5 my-6 mx-8">
         <Link href="/">
           <Image
