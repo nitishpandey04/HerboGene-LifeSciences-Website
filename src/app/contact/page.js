@@ -6,7 +6,7 @@ export default function About() {
     <div className="flex flex-col items-center">
       <div className="flex flex-col md:w-2/3 gap-y-8">
         <div className="">
-          <p className="font-bold text-xl text-center">Reach out to us</p>
+          <p className="text-xl text-center">Reach Out To Us</p>
           <div className="h-60 w-full relative md:h-80 md:my-4">
             <Image
               src="/contact_us_3.png"
