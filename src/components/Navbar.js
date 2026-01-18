@@ -30,13 +30,17 @@ export default function Navbar() {
                         <NavLink href="/about">About Us</NavLink>
                         <NavLink href="/products">Products</NavLink>
                         <NavLink href="/contact">Contact</NavLink>
+
+                        <CartButton />
+
                         <Link href="/contact" className="bg-primary text-white px-5 py-2 rounded-full hover:bg-green-800 transition-colors shadow-lg hover:shadow-xl font-medium flex items-center gap-2">
                             <Phone size={16} />
                             <span>Get in Touch</span>
                         </Link>
                     </div>
 
-                    <div className="md:hidden flex items-center">
+                    <div className="md:hidden flex items-center gap-4">
+                        <CartButton />
                         <button onClick={toggleMenu} className="text-primary hover:text-green-800 focus:outline-none">
                             {isOpen ? <X size={28} /> : <Menu size={28} />}
                         </button>
@@ -68,6 +72,39 @@ function NavLink({ href, children }) {
             {children}
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full"></span>
         </Link>
+    );
+}
+
+import { useCartStore } from "../store/useCartStore";
+import { ShoppingBag } from "lucide-react";
+
+function CartButton() {
+    const { openCart, cartCount } = useCartStore();
+    const [mounted, setMounted] = useState(false);
+
+    // Hydration fix
+    useState(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return (
+        <button className="relative p-2 text-primary hover:bg-green-50 rounded-full transition-colors">
+            <ShoppingBag size={24} />
+        </button>
+    );
+
+    return (
+        <button
+            onClick={openCart}
+            className="relative p-2 text-primary hover:bg-green-50 rounded-full transition-colors group"
+        >
+            <ShoppingBag size={24} className="group-hover:scale-110 transition-transform" />
+            {cartCount() > 0 && (
+                <span className="absolute top-0 right-0 bg-secondary text-white text-xs font-bold h-5 w-5 flex items-center justify-center rounded-full animate-in zoom-in">
+                    {cartCount()}
+                </span>
+            )}
+        </button>
     );
 }
 

@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter, Playfair_Display } from 'next/font/google'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import CartDrawer from '../components/CartDrawer'
 
 const inter = Inter({
     subsets: ['latin'],
@@ -49,6 +50,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={`${inter.variable} ${playfair.variable} font-sans bg-background text-text-main`}>
                 <Navbar />
+                <CartDrawer />
                 <main className="min-h-screen pt-20">
                     {children}
                 </main>
