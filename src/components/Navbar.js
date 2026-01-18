@@ -15,13 +15,10 @@ export default function Navbar() {
                 <div className="flex justify-between items-center h-20">
                     <div className="flex-shrink-0 flex items-center">
                         <Link href="/" className="flex items-center gap-2">
-                            <div className="relative h-12 w-12 rounded-full overflow-hidden border-2 border-primary">
-                                {/* Placeholder for Logo if not present, but using Image assuming path exists */}
-                                <Image src="/herbogene_logo.png" alt="HerboGene Logo" fill className="object-cover" />
+                            <div className="relative h-16 w-80">
+                                <Image src="/herbogene_logo.png" alt="HerboGene Logo" fill className="object-contain" />
                             </div>
-                            <span className="font-serif font-bold text-xl tracking-wide hidden sm:block">
-                                HerboGene
-                            </span>
+
                         </Link>
                     </div>
 
