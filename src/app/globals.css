@@ -2,32 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+:root {
+  /* Ayurvedic Color Palette */
+  --color-primary: 22 101 52; /* Deep Forest Green (green-900 like) */
+  --color-secondary: 180 83 9; /* Earthy Gold (amber-700 like) */
+  --color-accent: 120 53 15; /* Rich Brown (orange-900 like) */
+  --color-background: 255 251 245; /* Warm Cream (amber-50 like) */
+  --color-surface: 255 255 255; /* White */
+  --color-text-main: 28 25 23; /* Warm Gray/Charcoal (stone-900) */
+  --color-text-muted: 87 83 78; /* Muted Stone (stone-600) */
+  
+  --foreground-rgb: 28, 25, 23;
+  --background-start-rgb: 255, 251, 245;
   --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-start-rgb));
+  font-family: 'Inter', sans-serif; /* Fallback, plan to import Google Font */
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(22, 101, 52, 0.85); /* Dark green glass */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-} */
+}
