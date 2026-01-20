@@ -15,6 +15,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata = {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://herbogene.com'),
     title: {
         default: "HerboGene LifeSciences | Premium Ayurvedic Medicines",
         template: "%s | HerboGene LifeSciences",
